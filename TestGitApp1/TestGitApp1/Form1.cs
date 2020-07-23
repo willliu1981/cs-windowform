@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace TestGitApp1
 {
@@ -19,7 +20,13 @@ namespace TestGitApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = "Hello Git 3.0";
+            string xml = "<a>Tag Text</a>";
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(xml);
+            XmlNode root = doc.FirstChild;
+
+
+            label1.Text = "Hello : "+root.ChildNodes[0].Attributes;
         }
     }
 }
