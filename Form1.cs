@@ -27,7 +27,7 @@ namespace TestApp8
             XmlNode root = doc.FirstChild;
 
 
-            label1.Text = "Hello 2: " +(root.ChildNodes[0].Attributes.Count);
+            label1.Text = "Hello 3: " +(root.ChildNodes[0].Attributes.Count);
 
         }
     }
